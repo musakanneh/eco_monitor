@@ -5,7 +5,7 @@ import VueRouter from "vue-router";
  * Router links
  */
 import Home from "../views/Home";
-import About from "../views/About";
+import ShareData from "../views/ShareData";
 /**
  * Router links end
  */
@@ -16,9 +16,9 @@ const routes = [{
     name: "Home",
     component: Home,
 }, {
-    path: "/about",
-    name: "about",
-    component: About,
+    path: "/share-data",
+    name: "ShareData",
+    component: ShareData,
 }, ];
 
 const router = new VueRouter({

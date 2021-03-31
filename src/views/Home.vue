@@ -13,13 +13,17 @@
       <form action="#">
         <input type="text" placeholder="Enter your email" />
         <input type="text" placeholder="Enter your password" />
-        <button>Submit</button>
+        <div>
+          <a href="/share-data"> <button>Submit</button></a>
+        </div>
       </form>
     </section>
 
     <section class="sign-up-sec">
       <div><p>Don't have an account?</p></div>
-      <div><button>Sign Up</button></div>
+      <div>
+        <a href="/share-data"> <button>Sign Up</button></a>
+      </div>
     </section>
   </body>
 </template>
@@ -66,7 +70,7 @@ body {
 
   .access-account {
     margin: auto;
-    width: 80%;
+    width: 85%;
     margin-top: 1rem;
 
     input {
@@ -104,7 +108,7 @@ body {
   }
 
   .sign-up-sec {
-    width: 80%;
+    width: 85%;
     margin: auto;
     margin-top: 2rem;
     display: flex;
