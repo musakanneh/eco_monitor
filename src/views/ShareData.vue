@@ -10,9 +10,9 @@
     </main>
 
     <section class="section-cover">
-      <p>Daily update</p>
+      <p>Share update or report a crime</p>
       <div class="sign-up-sec">
-        <div><p>Select a location to share from</p></div>
+        <div><p>Select a location</p></div>
         <select name="cars" class="docs">
           <option value="volvo">Ololosoloko</option>
           <option value="saab">Article</option>
@@ -80,6 +80,11 @@ export default {
 <style lang="scss" scoped>
 @media only screen and (max-width: 900px) {
   body {
+    p {
+      font-weight: 300 !important;
+      font-size: 12px;
+      letter-spacing: .2px;
+    }
     main {
       background-image: linear-gradient(
           rgba(0, 0, 0, 0.234),
@@ -109,10 +114,14 @@ export default {
 
     .home-control {
       background: #649c0f;
+      outline: none;
+      font-size: 12px;
+      color: #fff;
       width: 100%;
       margin-top: 0.5rem;
       display: flex;
       justify-content: space-around;
+
 
       button:hover {
         background: green;
@@ -166,6 +175,7 @@ export default {
       }
 
       .sec-one {
+        //border: 1px solid rgba(221, 221, 221, 0.652);
         width: 100%;
         padding: 0.3rem;
       }

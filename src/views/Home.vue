@@ -20,13 +20,13 @@
           <button type="submit">Login</button>
         </div>
       </form>
-    </section>
 
-    <section class="sign-up-sec">
-      <div><p>Don't have an account?</p></div>
-      <div>
-        <a href="/"> <button>Sign Up</button></a>
-      </div>
+      <section class="sign-up-sec">
+        <div><p>Don't have an account?</p></div>
+        <div>
+          <a href="/"> <button>Sign Up</button></a>
+        </div>
+      </section>
     </section>
   </body>
 </template>
@@ -53,7 +53,7 @@ export default {
       }
     },
   },
-  
+
   data() {
     return {
       email: "",
@@ -68,8 +68,6 @@ export default {
 <style lang="scss" scoped>
 @media only screen and (max-width: 900px) {
   body {
-    background-color: rgba(221, 221, 221, 0.412);
-
     main {
       background-image: url("../assets/banner.png");
       background-repeat: no-repeat;
@@ -78,7 +76,7 @@ export default {
       margin-bottom: 2rem;
 
       aside {
-        padding: 6rem 1rem 8rem 1.5rem;
+        padding: 4rem 1rem 3rem 1.5rem;
 
         p {
           color: #fbfbfb;
@@ -87,30 +85,53 @@ export default {
         h1 {
           margin-top: 0;
           color: #fbfbfb;
-          font-size: 24px;
+          font-size: 20px;
+          font-weight: 400;
         }
       }
     }
 
     .access-account {
-      margin: auto;
-      width: 85%;
-      margin-top: 1rem;
+      display: block;
+      background-color: #fff;
+      padding: 20px 15px;
+      border-radius: 16px;
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      margin-top: -4rem;
 
       input {
-        font-family: "Raleway", sans-serif;
-        width: 80%;
-        height: 35px;
-        border: 1px solid #649c0f;
-        padding: 0 30px;
-        color: rgb(106, 106, 106);
-        font-size: 13px;
-        border-radius: 2px;
-        margin-bottom: 15px;
-      }
-
-      input:focus {
+        appearance: none;
+        border: none;
         outline: none;
+        background: none;
+        display: block;
+        width: 85%;
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        color: #333;
+        font-size: 18px;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        background-color: #f3f3f3;
+        transition: 0.4s;
+
+        &::placeholder {
+          color: #888;
+          transition: 0.4s;
+        }
+      }
+      &:focus-within {
+        label {
+          color: #ea526f;
+        }
+        input[type="text"] {
+          background-color: #fff;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+
+          &::placeholder {
+            color: #666;
+          }
+        }
       }
     }
 
@@ -118,7 +139,7 @@ export default {
       cursor: pointer;
       height: 40px;
       padding: 0 1rem;
-      width: 100%;
+      width: 95%;
       background: #649c0f;
       border-radius: 3px;
       border: none;
@@ -127,16 +148,16 @@ export default {
       border: 1px solid #649c0f;
       font-style: normal;
       font-weight: 500;
-      font-size: 13px;
+      font-size: 12px;
       color: #fff;
     }
 
     .sign-up-sec {
-      width: 85%;
+      width: 90%;
       margin: auto;
       margin-top: 2rem;
       display: flex;
-      padding-bottom: 4rem;
+      padding-bottom: 2rem;
       justify-content: space-between;
 
       p {
