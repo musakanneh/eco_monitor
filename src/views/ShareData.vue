@@ -4,7 +4,7 @@
       <aside>
         <h1>{{ Intro }}</h1>
         <p>
-          Share your location data here
+          Choose your location to report an issue (s).
         </p>
       </aside>
     </main>
@@ -16,9 +16,6 @@
         <div><p>Select your location:</p></div>
         <select name="cars" class="docs">
           <option value="volvo">Ololosoloko</option>
-          <option value="saab">Article</option>
-          <option value="saab">Report</option>
-          <option value="saab">Media</option>
           <option value="saab">Documents</option>
           <option value="opel">Monograph</option>
           <option value="audi">Periodical</option>
@@ -52,10 +49,13 @@
 
     <section class="home-control">
       <div>
-        <a href="/"><button>Home</button></a>
+        <a href="/"
+          ><button>
+            <i class="fas fa-house-user" style="font-size: 20px;"></i></button
+        ></a>
       </div>
       <div>
-        <button type="submit">Submit</button>
+        <button class="submit-report" type="submit">Submit report</button>
       </div>
     </section>
   </body>
@@ -79,7 +79,7 @@ export default {
     getStyle(index) {
       return this.selectedIndex == index
         ? {
-            "border-radius": "3px",
+            "border-radius": "10px",
             "background-color": "#649c0f",
             color: "#fff",
           }
@@ -133,7 +133,7 @@ export default {
       width: 100%;
       margin-top: 2.5rem;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
 
       button:hover {
         background: green;
