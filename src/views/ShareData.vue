@@ -31,7 +31,6 @@
           <img src="../assets/tiger.png" alt="" />
           <p>Human Wildlife Conflict</p>
         </div>
-
         <div @click="buttonisPressed(1)" class="sec-one" :style="getStyle(1)">
           <img src="../assets/tiger.png" alt="" />
           <p>Park boundary trespassing</p>
@@ -66,7 +65,7 @@ export default {
   data() {
     return {
       isRedColor: "red",
-      Intro: "Ecological Monitoring Application",
+      Intro: "Ecological Monitoring App",
       selectedIndex: 0,
     };
   },
@@ -108,7 +107,7 @@ export default {
       width: 100%;
 
       aside {
-        padding: 2rem 1rem 1rem 1.5rem;
+        padding: 3rem 1rem 2rem 1.5rem;
 
         p {
           color: #fbfbfb;
@@ -127,10 +126,11 @@ export default {
     .home-control {
       background: #649c0f;
       outline: none;
+      padding: 0.5rem 0;
       font-size: 12px;
       color: #fff;
       width: 100%;
-      margin-top: 2.4rem;
+      margin-top: 3rem;
       display: flex;
       justify-content: space-around;
 
@@ -175,6 +175,7 @@ export default {
 
     .data-categories {
       display: flex;
+      margin-top: 1rem;
 
       p {
         margin: 6px 0;

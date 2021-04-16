@@ -78,7 +78,7 @@ export default {
       background-repeat: no-repeat;
       margin: auto;
       width: 100%;
-      margin-bottom: 2rem;
+      margin-bottom: 3.3rem;
 
       aside {
         padding: 4rem 1rem 3rem 1.5rem;
@@ -111,9 +111,9 @@ export default {
         outline: none;
         background: none;
         display: block;
-        width: 89%;
+        width: 90%;
         padding: 10px 15px;
-        border-radius: 8px;
+        border-radius: 5px;
         margin-bottom: 20px;
         color: #333;
         font-size: 18px;
