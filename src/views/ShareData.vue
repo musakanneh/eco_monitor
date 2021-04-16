@@ -4,7 +4,7 @@
       <aside>
         <h1>{{ Intro }}</h1>
         <p>
-          Share your location information
+          Share your location data here
         </p>
       </aside>
     </main>
@@ -26,23 +26,24 @@
     </section>
 
     <section class="section-cover">
-      <div @click="buttonisPressed()" class="data-categories">
-        <div class="sec-one">
+      <div class="data-categories">
+        <div @click="buttonisPressed(0)" :style="getStyle(0)" class="sec-one">
           <img src="../assets/tiger.png" alt="" />
           <p>Human Wildlife Conflict</p>
         </div>
-        <div class="sec-one">
+
+        <div @click="buttonisPressed(1)" class="sec-one" :style="getStyle(1)">
           <img src="../assets/tiger.png" alt="" />
           <p>Park boundary trespassing</p>
         </div>
       </div>
 
       <div class="data-categories">
-        <div class="sec-one">
+        <div @click="buttonisPressed(2)" class="sec-one" :style="getStyle(2)">
           <img src="../assets/tiger.png" alt="" />
-          <p>Human Wildlife Conflict</p>
+          <p>Livestock grazing</p>
         </div>
-        <div class="sec-one">
+        <div @click="buttonisPressed(3)" class="sec-one" :style="getStyle(3)">
           <img src="../assets/tiger.png" alt="" />
           <p>Human Wildlife Conflict</p>
         </div>
@@ -66,12 +67,23 @@ export default {
     return {
       isRedColor: "red",
       Intro: "Ecological Monitoring Application",
+      selectedIndex: 0,
     };
   },
 
   methods: {
-    async buttonisPressed() {
-      alert("Musa");
+    async buttonisPressed(index) {
+      this.selectedIndex = index;
+    },
+
+    getStyle(index) {
+      return this.selectedIndex == index
+        ? {
+            "border-radius": "3px",
+            "background-color": "#649c0f",
+            color: "#fff",
+          }
+        : {};
     },
   },
 };
@@ -83,7 +95,7 @@ export default {
     p {
       font-weight: 300 !important;
       font-size: 12px;
-      letter-spacing: .2px;
+      letter-spacing: 0.2px;
     }
     main {
       background-image: linear-gradient(
@@ -118,10 +130,9 @@ export default {
       font-size: 12px;
       color: #fff;
       width: 100%;
-      margin-top: 0.5rem;
+      margin-top: 2.4rem;
       display: flex;
       justify-content: space-around;
-
 
       button:hover {
         background: green;
