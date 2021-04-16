@@ -9,10 +9,11 @@
       </aside>
     </main>
 
-    <section class="section-cover">
-      <p>Share update or report a crime</p>
+    <section class="section-cover-1">
+      <strong>Share update or report a crime</strong>
+      <br /><br />
       <div class="sign-up-sec">
-        <div><p>Select a location</p></div>
+        <div><p>Select your location:</p></div>
         <select name="cars" class="docs">
           <option value="volvo">Ololosoloko</option>
           <option value="saab">Article</option>
@@ -130,7 +131,7 @@ export default {
       font-size: 12px;
       color: #fff;
       width: 100%;
-      margin-top: 3rem;
+      margin-top: 2.5rem;
       display: flex;
       justify-content: space-around;
 
@@ -187,19 +188,17 @@ export default {
       }
 
       .sec-one {
-        //border: 1px solid rgba(221, 221, 221, 0.652);
         width: 100%;
         padding: 0.3rem;
       }
     }
 
-    .section-cover {
+    .section-cover-1 {
+      display: block;
+      background-color: #fff;
+      padding: 20px 15px;
       width: 90%;
-      margin: auto;
 
-      h2 {
-        font-size: 20px;
-      }
       .sign-up-sec {
         display: flex;
         justify-content: space-between;
@@ -207,6 +206,21 @@ export default {
         p {
           font-size: 14px;
         }
+      }
+    }
+
+    .section-cover {
+      display: block;
+      background-color: #fff;
+      padding: 20px 15px;
+      border-radius: 16px;
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      margin-top: -4rem;
+      width: 90%;
+      margin: auto;
+
+      h2 {
+        font-size: 20px;
       }
     }
   }
