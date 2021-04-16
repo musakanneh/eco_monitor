@@ -1,9 +1,30 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from "./router";
+import axios from "axios";
+import firebase from "firebase/app"
 
-// Vue.use(VueMeta)
+/* eslint-disable */
+Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
+
+/**
+ * Your web app 's Firebase configuration
+ */
+const firebaseConfig = {
+    apiKey: "AIzaSyBs2nmguHUoj63mLmPgYMo9kJgGOlwVrUc",
+    authDomain: "eco-monitor-90a2f.firebaseapp.com",
+    projectId: "eco-monitor-90a2f",
+    storageBucket: "eco-monitor-90a2f.appspot.com",
+    messagingSenderId: "117749325643",
+    appId: "1:117749325643:web:6a57bdbd73cba004fc92ce"
+};
+/**
+ * Initialize Firebase
+ * 
+ */
+firebase.initializeApp(firebaseConfig);
+
 
 new Vue({
     router,

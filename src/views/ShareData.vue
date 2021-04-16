@@ -62,93 +62,95 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-  main {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.234),
-        rgba(0, 0, 0, 0.529)
-      ),
-      url("../assets/leo.png");
-    background-repeat: no-repeat;
-    margin: auto;
-    width: 100%;
+@media only screen and (max-width: 900px) {
+  body {
+    main {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.234),
+          rgba(0, 0, 0, 0.529)
+        ),
+        url("../assets/leo.png");
+      background-repeat: no-repeat;
+      margin: auto;
+      width: 100%;
 
-    aside {
-      padding: 3rem 1rem 5rem 1.5rem;
+      aside {
+        padding: 3rem 1rem 5rem 1.5rem;
 
-      p {
-        color: #fbfbfb;
-      }
+        p {
+          color: #fbfbfb;
+        }
 
-      h1 {
-        margin-top: 0;
-        color: #fbfbfb;
-        font-size: 24px;
+        h1 {
+          margin-top: 0;
+          color: #fbfbfb;
+          font-size: 24px;
+        }
       }
     }
-  }
 
-  select {
-    width: 35%;
-    height: 35px;
-    border-radius: 3px;
-    padding: 0.5rem 0;
-    background: #ffffff;
-    border: 1px solid #649c0f;
-  }
+    select {
+      width: 35%;
+      height: 35px;
+      border-radius: 3px;
+      padding: 0.5rem 0;
+      background: #ffffff;
+      border: 1px solid #649c0f;
+    }
 
-  select:hover {
-    outline: none;
-  }
+    select:hover {
+      outline: none;
+    }
 
-  button {
-    cursor: pointer;
-    height: 40px;
-    padding: 0 1rem;
-    width: 100%;
-    background: #649c0f;
-    border-radius: 3px;
-    border: none;
-    border-style: none;
-    outline: none;
-    border: 1px solid #649c0f;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    color: #fff;
-  }
-
-  .data-categories {
-    display: flex;
-
-    p {
-      margin: 6px 0;
+    button {
+      cursor: pointer;
+      height: 40px;
+      padding: 0 1rem;
+      width: 100%;
+      background: #649c0f;
+      border-radius: 3px;
+      border: none;
+      border-style: none;
+      outline: none;
+      border: 1px solid #649c0f;
+      font-style: normal;
+      font-weight: 500;
       font-size: 13px;
+      color: #fff;
     }
 
-    img {
-      width: 100%;
-    }
-
-    .sec-one {
-      width: 100%;
-      padding: 0.3rem;
-    }
-  }
-
-  .section-cover {
-    width: 90%;
-    margin: auto;
-
-    h2 {
-      font-size: 20px;
-    }
-    .sign-up-sec {
+    .data-categories {
       display: flex;
-      justify-content: space-between;
 
       p {
-        font-size: 14px;
+        margin: 6px 0;
+        font-size: 13px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .sec-one {
+        width: 100%;
+        padding: 0.3rem;
+      }
+    }
+
+    .section-cover {
+      width: 90%;
+      margin: auto;
+
+      h2 {
+        font-size: 20px;
+      }
+      .sign-up-sec {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          font-size: 14px;
+        }
       }
     }
   }

@@ -8,6 +8,21 @@
 export default {
   name: "App",
   components: {},
+
+  data() {
+    return {
+      mobileView: "true",
+    };
+  },
+  // methods: {
+  //   isMobile(){
+  //     if (Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  //       return true;
+  //         }else{
+  //           return false;
+  //         }
+  //   },
+  // },
 };
 </script>
 
@@ -20,5 +35,4 @@ export default {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
-
 </style>

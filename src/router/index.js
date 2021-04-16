@@ -16,7 +16,7 @@ const routes = [{
     name: "Home",
     component: Home,
 }, {
-    path: "/share-data",
+    path: "/shareData",
     name: "ShareData",
     component: ShareData,
 }, ];
