@@ -10,7 +10,7 @@
     </main>
 
     <section class="section-cover">
-      <h2>Daily update</h2>
+      <p>Daily update</p>
       <div class="sign-up-sec">
         <div><p>Select a location to share from</p></div>
         <select name="cars" class="docs">
@@ -26,7 +26,6 @@
     </section>
 
     <section class="section-cover">
-      <br />
       <div class="data-categories">
         <div class="sec-one">
           <img src="../assets/tiger.png" alt="" />
@@ -46,6 +45,15 @@
           <img src="../assets/tiger.png" alt="" />
           <p>Human Wildlife Conflict</p>
         </div>
+      </div>
+    </section>
+
+    <section class="home-control">
+      <div>
+        <a href="/"><button>Home</button></a>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
       </div>
     </section>
   </body>
@@ -86,6 +94,22 @@ export default {
           color: #fbfbfb;
           font-size: 24px;
         }
+      }
+    }
+
+    .home-control {
+      background: #649c0f;
+      width: 100%;
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: space-around;
+
+      button:hover {
+        background: green;
+      }
+
+      p {
+        font-size: 12px;
       }
     }
 

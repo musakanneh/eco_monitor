@@ -49,10 +49,11 @@ export default {
         this.$router.replace({ name: "ShareData" });
         console.log(user);
       } catch (err) {
-        alert(err);
+        alert("Invalid username or password");
       }
     },
   },
+  
   data() {
     return {
       email: "",
