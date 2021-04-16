@@ -6,6 +6,7 @@ import VueRouter from "vue-router";
  */
 import Home from "../views/Home";
 import ShareData from "../views/ShareData";
+
 /**
  * Router links end
  */

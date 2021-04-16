@@ -28,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 #app {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   color: #484848;
   -moz-osx-font-smoothing: grayscale;

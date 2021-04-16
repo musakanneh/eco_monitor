@@ -26,7 +26,7 @@
     </section>
 
     <section class="section-cover">
-      <div class="data-categories">
+      <div @click="buttonisPressed()" class="data-categories">
         <div class="sec-one">
           <img src="../assets/tiger.png" alt="" />
           <p>Human Wildlife Conflict</p>
@@ -36,6 +36,7 @@
           <p>Human Wildlife Conflict</p>
         </div>
       </div>
+
       <div class="data-categories">
         <div class="sec-one">
           <img src="../assets/tiger.png" alt="" />
@@ -63,8 +64,15 @@
 export default {
   data() {
     return {
+      isRedColor: "red",
       Intro: "Ecological Monitoring Application",
     };
+  },
+
+  methods: {
+    async buttonisPressed() {
+      alert("Musa");
+    },
   },
 };
 </script>
@@ -83,7 +91,7 @@ export default {
       width: 100%;
 
       aside {
-        padding: 3rem 1rem 5rem 1.5rem;
+        padding: 2rem 1rem 1rem 1.5rem;
 
         p {
           color: #fbfbfb;
@@ -92,7 +100,9 @@ export default {
         h1 {
           margin-top: 0;
           color: #fbfbfb;
-          font-size: 24px;
+          font-size: 20px;
+          letter-spacing: 1px;
+          font-weight: 400;
         }
       }
     }
