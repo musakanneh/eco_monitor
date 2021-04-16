@@ -4,13 +4,13 @@
       <aside>
         <h1>{{ Intro }}</h1>
         <p>
-          Access your account share your location data
+          Access your account to share your location data
         </p>
       </aside>
     </main>
 
     <section class="access-account">
-      <form @submit.prevent="pressed">
+      <form @submit.prevent="authenticateUserLogin">
         <p>Login here</p>
         <br />
         <div class="email"><input type="email" placeholder="email" /></div>
@@ -42,7 +42,7 @@ export default {
   computed: {},
 
   methods: {
-    async pressed() {
+    async authenticateUserLogin() {
       try {
         const user = firebase
           .auth()
@@ -73,6 +73,37 @@ export default {
       font-size: 12px;
       font-weight: 300;
     }
+    
+    button {
+      cursor: pointer;
+      height: 40px;
+      padding: 0 1rem;
+      width: 100%;
+      background: #649c0f;
+      border-radius: 3px;
+      border: none;
+      border-style: none;
+      outline: none;
+      border: 1px solid #649c0f;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .sign-up-sec {
+      width: 100%;
+      margin: auto;
+      margin-top: 2.5rem;
+      display: flex;
+      padding-bottom: 2rem;
+      justify-content: space-between;
+
+      p {
+        font-size: 12px;
+      }
+    }
+
     main {
       background-image: url("../assets/banner.png");
       background-repeat: no-repeat;
@@ -126,6 +157,7 @@ export default {
           transition: 0.4s;
         }
       }
+
       &:focus-within {
         label {
           color: #ea526f;
@@ -138,36 +170,6 @@ export default {
             color: #666;
           }
         }
-      }
-    }
-
-    button {
-      cursor: pointer;
-      height: 40px;
-      padding: 0 1rem;
-      width: 100%;
-      background: #649c0f;
-      border-radius: 3px;
-      border: none;
-      border-style: none;
-      outline: none;
-      border: 1px solid #649c0f;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 12px;
-      color: #fff;
-    }
-
-    .sign-up-sec {
-      width: 100%;
-      margin: auto;
-      margin-top: 2.5rem;
-      display: flex;
-      padding-bottom: 2rem;
-      justify-content: space-between;
-
-      p {
-        font-size: 12px;
       }
     }
   }

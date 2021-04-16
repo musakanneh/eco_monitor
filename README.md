@@ -1,3 +1,2 @@
 # Ecological Monitoring App
-
-See [EcologicalPeace](http://ecologicalpeace.org/databases)
+![alt](./src/assets/demo.png)
