@@ -33,7 +33,7 @@
         </div>
         <div class="sec-one">
           <img src="../assets/tiger.png" alt="" />
-          <p>Human Wildlife Conflict</p>
+          <p>Park boundary trespassing</p>
         </div>
       </div>
 

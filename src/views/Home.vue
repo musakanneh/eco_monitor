@@ -4,14 +4,15 @@
       <aside>
         <h1>{{ Intro }}</h1>
         <p>
-          Access your account share your location information
+          Access your account share your location data
         </p>
       </aside>
     </main>
 
     <section class="access-account">
       <form @submit.prevent="pressed">
-        <p>Resister</p>
+        <p>Login here</p>
+        <br />
         <div class="email"><input type="email" placeholder="email" /></div>
         <div class="password">
           <input type="password" placeholder="password" />
@@ -68,6 +69,10 @@ export default {
 <style lang="scss" scoped>
 @media only screen and (max-width: 900px) {
   body {
+    p {
+      font-size: 12px;
+      font-weight: 300;
+    }
     main {
       background-image: url("../assets/banner.png");
       background-repeat: no-repeat;
@@ -84,6 +89,7 @@ export default {
 
         h1 {
           margin-top: 0;
+          line-height: 1.5rem;
           color: #fbfbfb;
           font-size: 20px;
           font-weight: 400;
@@ -105,10 +111,10 @@ export default {
         outline: none;
         background: none;
         display: block;
-        width: 85%;
+        width: 89%;
         padding: 10px 15px;
         border-radius: 8px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         color: #333;
         font-size: 18px;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
@@ -139,7 +145,7 @@ export default {
       cursor: pointer;
       height: 40px;
       padding: 0 1rem;
-      width: 95%;
+      width: 100%;
       background: #649c0f;
       border-radius: 3px;
       border: none;
@@ -153,9 +159,9 @@ export default {
     }
 
     .sign-up-sec {
-      width: 90%;
+      width: 100%;
       margin: auto;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       display: flex;
       padding-bottom: 2rem;
       justify-content: space-between;
