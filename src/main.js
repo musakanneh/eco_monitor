@@ -9,7 +9,7 @@ Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
 
 /**
- * Your web app 's Firebase configuration
+ * Firebase configuration for the backend server
  */
 const firebaseConfig = {
     apiKey: "AIzaSyBs2nmguHUoj63mLmPgYMo9kJgGOlwVrUc",

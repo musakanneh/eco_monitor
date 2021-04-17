@@ -42,7 +42,7 @@
         </div>
         <div @click="buttonisPressed(3)" class="sec-one" :style="getStyle(3)">
           <img src="../assets/tiger.png" alt="" />
-          <p>Human Wildlife Conflict</p>
+          <p>Weather report</p>
         </div>
       </div>
     </section>
@@ -55,7 +55,9 @@
         ></a>
       </div>
       <div>
-        <button class="submit-report" type="submit">Submit report</button>
+        <button @click="submissionStatus()" class="submit-report" type="submit">
+          Submit report
+        </button>
       </div>
     </section>
   </body>
@@ -84,6 +86,10 @@ export default {
             color: "#fff",
           }
         : {};
+    },
+
+    submissionStatus() {
+      alert("Data submitted successfull!");
     },
   },
 };

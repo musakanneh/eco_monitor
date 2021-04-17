@@ -73,7 +73,7 @@ export default {
       font-size: 12px;
       font-weight: 300;
     }
-    
+
     button {
       cursor: pointer;
       height: 40px;
