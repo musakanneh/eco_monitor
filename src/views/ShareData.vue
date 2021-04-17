@@ -89,7 +89,7 @@ export default {
     },
 
     submissionStatus() {
-      alert("Data submitted successfull!");
+      alert("Data submitted successfully!");
     },
   },
 };
