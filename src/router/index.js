@@ -6,6 +6,7 @@ import VueRouter from "vue-router";
  */
 import Home from "../views/Home";
 import ShareData from "../views/ShareData";
+import SendMessage from "../views/SendMessage";
 
 /**
  * Router links end
@@ -20,6 +21,10 @@ const routes = [{
     path: "/shareData",
     name: "ShareData",
     component: ShareData,
+}, {
+    path: "/send-message",
+    name: "SendMessage",
+    component: SendMessage,
 }, ];
 
 const router = new VueRouter({

@@ -55,8 +55,8 @@
         ></a>
       </div>
       <div>
-        <button @click="submissionStatus()" class="submit-report" type="submit">
-          Submit report
+        <button class="submit-report" type="submit">
+          <a href="send-message">Submit report</a>
         </button>
       </div>
     </section>
@@ -89,7 +89,7 @@ export default {
     },
 
     submissionStatus() {
-      alert("Data submitted successfully!");
+      // alert("Data submitted successfully!");
     },
   },
 };
