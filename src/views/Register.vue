@@ -4,7 +4,7 @@
       <aside>
         <h1>{{ Intro }}</h1>
         <p>
-          Access your account to share your location data
+          Register to acecss your account
         </p>
       </aside>
     </main>
@@ -12,22 +12,25 @@
     <section class="access-account">
       <form @submit.prevent="authenticateUserLogin">
         <br />
-        <p>Login here</p>
+        <p>Register here</p>
         <div class="email">
-          <input type="Phone number" placeholder="Phone number" />
+          <input type="First name" placeholder="First name" />
+        </div>
+        <div class="email">
+          <input type="Last name" placeholder="Last name" />
         </div>
         <div class="password">
-          <input type="password" placeholder="password" />
+          <input type="Phone number" placeholder="Phone number" />
         </div>
         <div>
-          <button type="submit">Login</button>
+          <button type="submit">Register</button>
         </div>
       </form>
 
       <section class="sign-up-sec">
-        <div><p>Don't have an account?</p></div>
+        <div><p>Already have an account?</p></div>
         <div>
-          <a href="/register"> <button>Register</button></a>
+          <a href="/"> <button>Login</button></a>
         </div>
       </section>
     </section>
@@ -62,7 +65,7 @@ export default {
         const user = firebase
           .auth()
           .createUserWithEmailAndPassword(this.email, this.password);
-        this.$router.replace({ name: "ShareData" });
+        this.$router.replace({ name: "register" });
         console.log(user);
       } catch (err) {
         alert("Invalid username or password");
@@ -72,10 +75,11 @@ export default {
 
   data() {
     return {
-      email: "",
-      password: "",
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
       error: "",
-      Intro: "The Ecological Monitoring Application",
+      Intro: "Register to acecss your account",
     };
   },
 };
