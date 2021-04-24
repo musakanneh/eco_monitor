@@ -8,6 +8,8 @@ import firebase from "firebase/app"
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
 
+// import "font-awesome/css/font-awesome.min.css";
+
 /**
  * Firebase configuration for the backend server
  */

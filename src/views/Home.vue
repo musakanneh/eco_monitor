@@ -11,8 +11,8 @@
 
     <section class="access-account">
       <form @submit.prevent="authenticateUserLogin">
-        <p>Login here</p>
         <br />
+        <p>Login here</p>
         <div class="email">
           <input type="Phone number" placeholder="Phone number" />
         </div>
@@ -183,6 +183,7 @@ export default {
         width: 90%;
         padding: 10px 15px;
         border-radius: 5px;
+        margin-top: 20px;
         margin-bottom: 20px;
         color: #333;
         font-size: 18px;

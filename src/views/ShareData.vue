@@ -26,22 +26,22 @@
     <section class="section-cover">
       <div class="data-categories">
         <div @click="buttonisPressed(0)" :style="getStyle(0)" class="sec-one">
-          <img src="../assets/tiger.png" alt="" />
-          <p>Human Wildlife Conflict</p>
+          <i class="fas fa-hippo"></i>
+          <p>Species citing</p>
         </div>
         <div @click="buttonisPressed(1)" class="sec-one" :style="getStyle(1)">
-          <img src="../assets/tiger.png" alt="" />
+          <i class="fas fa-paw"></i>
           <p>Park boundary trespassing</p>
         </div>
       </div>
 
       <div class="data-categories">
         <div @click="buttonisPressed(2)" class="sec-one" :style="getStyle(2)">
-          <img src="../assets/tiger.png" alt="" />
+          <i class="fas fa-horse"></i>
           <p>Livestock grazing</p>
         </div>
         <div @click="buttonisPressed(3)" class="sec-one" :style="getStyle(3)">
-          <img src="../assets/tiger.png" alt="" />
+          <i class="fas fa-cloud"></i>
           <p>Weather report</p>
         </div>
       </div>
@@ -81,8 +81,8 @@ export default {
     getStyle(index) {
       return this.selectedIndex == index
         ? {
-            "border-radius": "10px",
-            "background-color": "#649c0f",
+            "border-radius": "4px",
+            "background-color": "#505050",
             color: "#fff",
           }
         : {};
@@ -199,6 +199,17 @@ export default {
       .sec-one {
         width: 100%;
         padding: 0.3rem;
+
+        p {
+          font-size: 14px;
+          text-align: center;
+        }
+
+        i {
+          font-size: 3.5rem;
+          padding: 1rem 2rem;
+          color: #649c0f;
+        }
       }
     }
 

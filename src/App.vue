@@ -1,5 +1,14 @@
 <template>
   <div id="app">
+   <!-- <div id="app"> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+
     <router-view />
   </div>
 </template>
@@ -14,15 +23,6 @@ export default {
       mobileView: "true",
     };
   },
-  // methods: {
-  //   isMobile(){
-  //     if (Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-  //       return true;
-  //         }else{
-  //           return false;
-  //         }
-  //   },
-  // },
 };
 </script>
 
