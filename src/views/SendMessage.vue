@@ -9,16 +9,22 @@
       </aside>
     </main>
 
-    <section class="access-account">
-      <form @submit.prevent="authenticateUserLogin">
-        <br />
-        <div class="email"><textarea placeholder="email" /></div>
+    <form></form>
 
+    <section class="access-account">
+      <form v.on:submit.prevent="add">
+        <br />
         <div>
-          <button type="submit">Login</button>
+          <div class="email">
+            <textarea v-model="text.text" placeholder="Enter report" />
+          </div>
+          <button type="submit" value="add">
+            Submit data
+          </button>
         </div>
       </form>
     </section>
+
     <section class="home-control">
       <div>
         <a href="/"
@@ -36,35 +42,48 @@
 </template>
 
 <script>
-import firebase from "firebase/app";
-import "firebase/auth";
+// import firebase from "firebase";
+// import toastr from "toastr";
+
+// let config = {
+//   apiKey: "AIzaSyBs2nmguHUoj63mLmPgYMo9kJgGOlwVrUc",
+//   authDomain: "eco-monitor-90a2f.firebaseapp.com",
+//   projectId: "eco-monitor-90a2f",
+//   storageBucket: "eco-monitor-90a2f.appspot.com",
+//   messagingSenderId: "117749325643",
+//   appId: "1:117749325643:web:6a57bdbd73cba004fc92ce",
+// };
+
+// let app = firebase.initializeApp(config);
+// let db = app.database();
+// let textRef = db.ref("text");
 
 export default {
-  name: "home",
-
-  computed: {},
-
-  methods: {
-    async authenticateUserLogin() {
-      try {
-        const user = firebase
-          .auth()
-          .createUserWithEmailAndPassword(this.email, this.password);
-        this.$router.replace({ name: "ShareData" });
-        console.log(user);
-      } catch (err) {
-        alert("Invalid username or password");
-      }
-    },
+  name: "message",
+  firebase: {
+    // texts: textRef,
   },
 
   data() {
     return {
-      email: "",
-      password: "",
-      error: "",
+      text: {
+        text: "",
+      },
       Intro: "The Ecological Monitoring Application",
     };
+  },
+
+  methods: {
+    add() {
+      textRef.push(this.text);
+      this.text.text = "";
+      this.submitMessage();
+      //   toastr.success("Submitted successfully!");
+    },
+
+    submitMessage() {
+      alert("Message added!");
+    },
   },
 };
 </script>
