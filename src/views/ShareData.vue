@@ -26,7 +26,7 @@
     <section class="section-cover">
       <div class="data-categories">
         <div @click="buttonisPressed(0)" :style="getStyle(0)" class="sec-one">
-          <i class="fas fa-hippo"></i>
+          <i class="fas fa-cloud"></i>
           <p>Species citing</p>
         </div>
         <div @click="buttonisPressed(1)" class="sec-one" :style="getStyle(1)">
@@ -37,7 +37,7 @@
 
       <div class="data-categories">
         <div @click="buttonisPressed(2)" class="sec-one" :style="getStyle(2)">
-          <i class="fas fa-horse"></i>
+          <i class="fas fa-cloud"></i>
           <p>Livestock grazing</p>
         </div>
         <div @click="buttonisPressed(3)" class="sec-one" :style="getStyle(3)">
@@ -185,7 +185,6 @@ export default {
 
     .data-categories {
       display: flex;
-      margin-top: 1rem;
 
       p {
         margin: 6px 0;
@@ -198,16 +197,18 @@ export default {
 
       .sec-one {
         width: 100%;
+        border: 1px solid #ddd;
+        padding: 0.5rem;
 
         p {
-          font-size: 14px;
+          font-size: 13px;
           text-align: left;
           padding: 0 10px;
         }
 
         i {
           font-size: 2.4rem;
-          padding: .5rem 1.5rem;
+          padding: 0.5rem 1.5rem;
           color: #649c0f;
         }
       }
