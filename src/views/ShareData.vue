@@ -198,16 +198,16 @@ export default {
 
       .sec-one {
         width: 100%;
-        padding: 0.3rem;
 
         p {
           font-size: 14px;
-          text-align: center;
+          text-align: left;
+          padding: 0 10px;
         }
 
         i {
-          font-size: 3.5rem;
-          padding: 1rem 2rem;
+          font-size: 2.4rem;
+          padding: .5rem 1.5rem;
           color: #649c0f;
         }
       }
