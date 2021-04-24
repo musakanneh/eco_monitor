@@ -13,7 +13,9 @@
       <form @submit.prevent="authenticateUserLogin">
         <p>Login here</p>
         <br />
-        <div class="email"><input type="email" placeholder="email" /></div>
+        <div class="email">
+          <input type="Phone number" placeholder="Phone number" />
+        </div>
         <div class="password">
           <input type="password" placeholder="password" />
         </div>
@@ -28,6 +30,19 @@
           <a href="/"> <button>Sign Up</button></a>
         </div>
       </section>
+    </section>
+    <section class="home-control">
+      <div>
+        <a href="/"
+          ><button>
+            <i class="fas fa-house-user" style="font-size: 18px;"></i></button
+        ></a>
+      </div>
+      <div>
+        <button class="submit-report" type="submit">
+          <a href="send-message">Submit report</a>
+        </button>
+      </div>
     </section>
   </body>
 </template>
@@ -72,6 +87,29 @@ export default {
     p {
       font-size: 12px;
       font-weight: 300;
+    }
+
+    .home-control {
+      background: #649c0f;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      outline: none;
+      padding: 0.5rem 0;
+      font-size: 12px;
+      color: #fff;
+      width: 100%;
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+
+      button:hover {
+        background: green;
+      }
+
+      p {
+        font-size: 12px;
+      }
     }
 
     button {
@@ -133,7 +171,7 @@ export default {
       background-color: #fff;
       padding: 20px 15px;
       border-radius: 16px;
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0);
       margin-top: -4rem;
 
       input {

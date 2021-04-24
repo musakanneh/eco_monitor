@@ -4,7 +4,7 @@
       <aside>
         <h1>{{ Intro }}</h1>
         <p>
-          Write message
+          Access your account to share your location data
         </p>
       </aside>
     </main>
@@ -12,18 +12,25 @@
     <section class="access-account">
       <form @submit.prevent="authenticateUserLogin">
         <br />
-        <div class="email">
-          <textarea type="email" placeholder="Write your message here" />
+        <div class="email"><textarea placeholder="email" /></div>
 
-          <div class="content">
-            <input type="checkbox" id="" name="" value="" />
-            <p>I consent to receiving in-app nitifications reguarly</p>
-          </div>
-        </div>
         <div>
-          <button @click="submitData()" type="submit">Submit data</button>
+          <button type="submit">Login</button>
         </div>
       </form>
+    </section>
+    <section class="home-control">
+      <div>
+        <a href="/"
+          ><button>
+            <i class="fas fa-house-user" style="font-size: 18px;"></i></button
+        ></a>
+      </div>
+      <div>
+        <button class="submit-report" type="submit">
+          <a href="send-message">Submit report</a>
+        </button>
+      </div>
     </section>
   </body>
 </template>
@@ -37,27 +44,27 @@ export default {
 
   computed: {},
 
-  data() {
-    return {
-      email: "",
-      password: "",
-      error: "",
-      Intro: "Input your data below",
-    };
-  },
-
   methods: {
     async authenticateUserLogin() {
       try {
         const user = firebase
           .auth()
           .createUserWithEmailAndPassword(this.email, this.password);
-        this.$router.replace({ name: "/" });
+        this.$router.replace({ name: "ShareData" });
         console.log(user);
       } catch (err) {
         alert("Invalid username or password");
       }
     },
+  },
+
+  data() {
+    return {
+      email: "",
+      password: "",
+      error: "",
+      Intro: "The Ecological Monitoring Application",
+    };
   },
 };
 </script>
@@ -68,6 +75,29 @@ export default {
     p {
       font-size: 12px;
       font-weight: 300;
+    }
+
+    .home-control {
+      background: #649c0f;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      outline: none;
+      padding: 0.5rem 0;
+      font-size: 12px;
+      color: #fff;
+      width: 100%;
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+
+      button:hover {
+        background: green;
+      }
+
+      p {
+        font-size: 12px;
+      }
     }
 
     button {
@@ -100,18 +130,6 @@ export default {
       }
     }
 
-    .content {
-      width: 95%;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1.5rem;
-
-      input,
-      p {
-        margin: 0;
-      }
-    }
-
     main {
       background-image: url("../assets/banner.png");
       background-repeat: no-repeat;
@@ -140,8 +158,9 @@ export default {
       display: block;
       background-color: #fff;
       padding: 20px 15px;
-      border-radius: 16px;
-      margin-top: -4rem;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0);
+      margin-top: -5rem;
 
       textarea {
         appearance: none;
@@ -150,7 +169,7 @@ export default {
         background: none;
         display: block;
         width: 90%;
-        padding: 25px 15px;
+        padding: 50px 15px;
         border-radius: 5px;
         margin-bottom: 20px;
         color: #333;
@@ -169,8 +188,7 @@ export default {
         label {
           color: #ea526f;
         }
-
-        input[type="text"] {
+        textarea[type="text"] {
           background-color: #fff;
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 

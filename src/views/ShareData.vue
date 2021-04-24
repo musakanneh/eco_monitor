@@ -132,6 +132,9 @@ export default {
 
     .home-control {
       background: #649c0f;
+      bottom: 0;
+      left: 0;
+      position: absolute;
       outline: none;
       padding: 0.5rem 0;
       font-size: 12px;
