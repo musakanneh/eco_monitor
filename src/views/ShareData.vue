@@ -22,7 +22,7 @@
       </div>
     </section>
 
-    <section class="section-cover">
+    <form v.on:submit.prevent="add" class="section-cover">
       <div class="data-categories">
         <div @click="buttonisPressed(0)" :style="getStyle(0)" class="sec-one">
           <i class="fas fa-cloud"></i>
@@ -46,10 +46,20 @@
         </div>
       </div>
       <br />
-      <button class="submit-report" type="submit">
-        <a href="message">Submit report</a>
-      </button>
-    </section>
+      <div class="btn-cover">
+        <button class="submit-report" type="submit">
+          <a href="message">Submit with text</a>
+        </button>
+        <button
+          @click="submitMessage()"
+          class="submit-report"
+          type="submit"
+          value="add"
+        >
+          Submit directly
+        </button>
+      </div>
+    </form>
     <Footer />
   </body>
 </template>
@@ -81,8 +91,15 @@ export default {
         : {};
     },
 
-    submissionStatus() {
-      // alert("Data submitted successfully!");
+    add() {
+      textRef.push(this.text);
+      this.text.text = "";
+      this.submitMessage();
+      //   toastr.success("Submitted successfully!");
+    },
+
+    submitMessage() {
+      alert("Message added!");
     },
   },
 };
@@ -95,8 +112,16 @@ export default {
     margin: auto;
   }
 
+  .btn-cover {
+    display: flex;
+    justify-content: space-between;
+
+    .submit-report {
+      width: 47% !important;
+    }
+  }
+
   body {
-  
     p {
       font-weight: 300 !important;
       font-size: 12px;
