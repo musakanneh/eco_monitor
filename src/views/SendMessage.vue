@@ -18,6 +18,16 @@
           <div class="email">
             <textarea v-model="text.text" placeholder="Enter report" />
           </div>
+          <article>
+            <p>
+              By submitting this data, you wave the permission to share it with
+              others for the safety of the community
+            </p>
+            <aside>
+              <input type="radio" />
+              <p>Do you wish to receive in-app notifications?</p>
+            </aside>
+          </article>
           <button type="submit" value="add">
             Submit data
           </button>
@@ -94,6 +104,24 @@ export default {
     p {
       font-size: 12px;
       font-weight: 300;
+    }
+
+    article {
+      width: 98%;
+      margin: auto;
+      margin-bottom: 2.5rem;
+
+      aside {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: left !important;
+        width: 75%;
+
+        p,
+        input {
+          margin: 0;
+        }
+      }
     }
 
     .home-control {
