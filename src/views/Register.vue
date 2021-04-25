@@ -11,13 +11,18 @@
 
     <section class="access-account">
       <form @submit.prevent="authenticateUserLogin">
-        <br />
-        <p>Register here</p>
+        <strong>User registration</strong>
         <div class="email">
           <input type="First name" placeholder="First name" />
         </div>
         <div class="email">
           <input type="Last name" placeholder="Last name" />
+        </div>
+        <div class="password">
+          <input type="Password" placeholder="Password" />
+        </div>
+        <div class="password">
+          <input type="Confirm password" placeholder="Confirm password" />
         </div>
         <div class="password">
           <input type="Phone number" placeholder="Phone number" />
@@ -43,7 +48,7 @@
       </div>
       <div>
         <button class="submit-report" type="submit">
-          <a href="send-message">Submit report</a>
+          <a href="message">Submit report</a>
         </button>
       </div>
     </section>
@@ -64,8 +69,8 @@ export default {
       try {
         const user = firebase
           .auth()
-          .createUserWithEmailAndPassword(this.email, this.password);
-        this.$router.replace({ name: "register" });
+          .createUserWithEmailAndPassword(this.firstName, this.lastName, this.phoneNumber);
+        this.$router.replace({ name: "send-message" });
         console.log(user);
       } catch (err) {
         alert("Invalid username or password");
@@ -136,7 +141,7 @@ export default {
     .sign-up-sec {
       width: 100%;
       margin: auto;
-      margin-top: 2.5rem;
+      margin-top: 1.5rem;
       display: flex;
       padding-bottom: 2rem;
       justify-content: space-between;
@@ -187,10 +192,9 @@ export default {
         width: 90%;
         padding: 10px 15px;
         border-radius: 5px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 15px 0;
         color: #333;
-        font-size: 18px;
+        font-size: 14px;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
         background-color: #f3f3f3;
         transition: 0.4s;

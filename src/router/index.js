@@ -16,14 +16,14 @@ Vue.use(VueRouter);
 
 const routes = [{
     path: "/",
-    name: "Home",
+    name: "home",
     component: Home,
 }, {
     path: "/shareData",
     name: "ShareData",
     component: ShareData,
 }, {
-    path: "/send-message",
+    path: "/message",
     name: "SendMessage",
     component: SendMessage,
 }, {

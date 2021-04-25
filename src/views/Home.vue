@@ -12,7 +12,7 @@
     <section class="access-account">
       <form @submit.prevent="authenticateUserLogin">
         <br />
-        <p>Login here</p>
+        <strong>User login</strong>
         <div class="email">
           <input type="Phone number" placeholder="Phone number" />
         </div>
@@ -40,7 +40,7 @@
       </div>
       <div>
         <button class="submit-report" type="submit">
-          <a href="send-message">Submit report</a>
+          <a href="message">Submit report</a>
         </button>
       </div>
     </section>

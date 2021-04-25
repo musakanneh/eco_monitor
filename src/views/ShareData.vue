@@ -56,7 +56,7 @@
       </div>
       <div>
         <button class="submit-report" type="submit">
-          <a href="send-message">Submit report</a>
+          <a href="message">Submit report</a>
         </button>
       </div>
     </section>
