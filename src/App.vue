@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <!-- <div id="app"> -->
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -34,10 +35,10 @@ export default {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
+
 * {
   display: flex;
   flex-direction: column;
   flex: auto;
-  height: 100%;
 }
 </style>

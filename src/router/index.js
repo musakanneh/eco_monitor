@@ -8,6 +8,7 @@ import Home from "../views/Home";
 import ShareData from "../views/ShareData";
 import SendMessage from "../views/SendMessage";
 import Register from "../views/Register";
+import Faq from "../views/Faq";
 
 /**
  * Router links end
@@ -30,6 +31,10 @@ const routes = [{
     path: "/register",
     name: "register",
     component: Register,
+}, {
+    path: "/faq",
+    name: "faq",
+    component: Faq,
 }, ];
 
 const router = new VueRouter({

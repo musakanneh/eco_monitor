@@ -39,28 +39,20 @@
         </div>
       </section>
     </section>
-    <section class="home-control">
-      <div>
-        <a href="/"
-          ><button>
-            <i class="fas fa-house-user" style="font-size: 18px;"></i></button
-        ></a>
-      </div>
-      <div>
-        <button class="submit-report" type="submit">
-          <a href="message">Submit report</a>
-        </button>
-      </div>
-    </section>
+
+    <Footer />
   </body>
 </template>
 
 <script>
+import Footer from "@/components/Footer.vue";
 import firebase from "firebase/app";
 import "firebase/auth";
 
 export default {
   name: "home",
+
+  components: { Footer },
 
   computed: {},
 
@@ -69,7 +61,11 @@ export default {
       try {
         const user = firebase
           .auth()
-          .createUserWithEmailAndPassword(this.firstName, this.lastName, this.phoneNumber);
+          .createUserWithEmailAndPassword(
+            this.firstName,
+            this.lastName,
+            this.phoneNumber
+          );
         this.$router.replace({ name: "send-message" });
         console.log(user);
       } catch (err) {
@@ -93,9 +89,28 @@ export default {
 <style lang="scss" scoped>
 @media only screen and (max-width: 900px) {
   body {
-    p {
-      font-size: 12px;
-      font-weight: 300;
+    main {
+      background-image: url("../assets/banner.png");
+      background-repeat: no-repeat;
+      margin: auto;
+      width: 100%;
+      margin-bottom: 3.3rem;
+
+      aside {
+        padding: 4rem 1rem 3rem 1.5rem;
+
+        p {
+          color: #fbfbfb;
+        }
+
+        h1 {
+          margin-top: 0;
+          line-height: 1.5rem;
+          color: #fbfbfb;
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
     }
 
     .home-control {
@@ -113,7 +128,7 @@ export default {
       justify-content: space-between;
 
       button:hover {
-        background: green;
+        background-color: green;
       }
 
       p {
@@ -148,30 +163,6 @@ export default {
 
       p {
         font-size: 12px;
-      }
-    }
-
-    main {
-      background-image: url("../assets/banner.png");
-      background-repeat: no-repeat;
-      margin: auto;
-      width: 100%;
-      margin-bottom: 3.3rem;
-
-      aside {
-        padding: 4rem 1rem 3rem 1.5rem;
-
-        p {
-          color: #fbfbfb;
-        }
-
-        h1 {
-          margin-top: 0;
-          line-height: 1.5rem;
-          color: #fbfbfb;
-          font-size: 20px;
-          font-weight: 400;
-        }
       }
     }
 

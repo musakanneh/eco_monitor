@@ -9,15 +9,15 @@
       </aside>
     </main>
 
-    <form></form>
-
     <section class="access-account">
       <form v.on:submit.prevent="add">
         <br />
+
         <div>
           <div class="email">
             <textarea v-model="text.text" placeholder="Enter report" />
           </div>
+
           <article>
             <p>
               By submitting this data, you wave the permission to share it with
@@ -28,6 +28,7 @@
               <p>Do you wish to receive in-app notifications?</p>
             </aside>
           </article>
+
           <button type="submit" value="add">
             Submit data
           </button>
@@ -35,23 +36,12 @@
       </form>
     </section>
 
-    <section class="home-control">
-      <div>
-        <a href="/"
-          ><button>
-            <i class="fas fa-house-user" style="font-size: 18px;"></i></button
-        ></a>
-      </div>
-      <div>
-        <button class="submit-report" type="submit">
-          <a href="send-message">Submit report</a>
-        </button>
-      </div>
-    </section>
+    <Footer />
   </body>
 </template>
 
 <script>
+import Footer from "@/components/Footer.vue";
 // import firebase from "firebase";
 // import toastr from "toastr";
 
@@ -70,6 +60,7 @@
 
 export default {
   name: "message",
+  components: { Footer },
   firebase: {
     // texts: textRef,
   },

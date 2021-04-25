@@ -4,14 +4,13 @@
       <aside>
         <h1>{{ Intro }}</h1>
         <p>
-          Choose your location to report an issue (s).
+          Choose your location to report an issue (s). <br />
+          Share an update or report a crime
         </p>
       </aside>
     </main>
 
     <section class="section-cover-1">
-      <strong>Share update or report a crime</strong>
-      <br /><br />
       <div class="sign-up-sec">
         <div><p>Select your location:</p></div>
         <select name="cars" class="docs">
@@ -27,7 +26,7 @@
       <div class="data-categories">
         <div @click="buttonisPressed(0)" :style="getStyle(0)" class="sec-one">
           <i class="fas fa-cloud"></i>
-          <p>Species citing</p>
+          <p>Species sighting</p>
         </div>
         <div @click="buttonisPressed(1)" class="sec-one" :style="getStyle(1)">
           <i class="fas fa-paw"></i>
@@ -40,31 +39,25 @@
           <i class="fas fa-cloud"></i>
           <p>Livestock grazing</p>
         </div>
+
         <div @click="buttonisPressed(3)" class="sec-one" :style="getStyle(3)">
           <i class="fas fa-cloud"></i>
           <p>Weather report</p>
         </div>
       </div>
+      <br />
+      <button class="submit-report" type="submit">
+        <a href="message">Submit report</a>
+      </button>
     </section>
-
-    <section class="home-control">
-      <div>
-        <a href="/"
-          ><button>
-            <i class="fas fa-house-user" style="font-size: 20px;"></i></button
-        ></a>
-      </div>
-      <div>
-        <button class="submit-report" type="submit">
-          <a href="message">Submit report</a>
-        </button>
-      </div>
-    </section>
+    <Footer />
   </body>
 </template>
 
 <script>
+import Footer from "@/components/Footer.vue";
 export default {
+  components: { Footer },
   data() {
     return {
       isRedColor: "red",
@@ -97,12 +90,28 @@ export default {
 
 <style lang="scss" scoped>
 @media only screen and (max-width: 900px) {
+  .home-btn {
+    width: 20%;
+    margin: auto;
+  }
+
   body {
+  
     p {
       font-weight: 300 !important;
       font-size: 12px;
       letter-spacing: 0.2px;
     }
+
+    .submit-report {
+      background-color: #649c0f;
+      border: none;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
     main {
       background-image: linear-gradient(
           rgba(0, 0, 0, 0.234),
@@ -127,29 +136,6 @@ export default {
           letter-spacing: 1px;
           font-weight: 400;
         }
-      }
-    }
-
-    .home-control {
-      background: #649c0f;
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      outline: none;
-      padding: 0.5rem 0;
-      font-size: 12px;
-      color: #fff;
-      width: 100%;
-      margin-top: 2.5rem;
-      display: flex;
-      justify-content: space-between;
-
-      button:hover {
-        background: green;
-      }
-
-      p {
-        font-size: 12px;
       }
     }
 
@@ -219,6 +205,7 @@ export default {
       background-color: #fff;
       padding: 20px 15px;
       width: 90%;
+      margin: auto;
 
       .sign-up-sec {
         display: flex;

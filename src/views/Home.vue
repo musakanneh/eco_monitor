@@ -31,18 +31,9 @@
         </div>
       </section>
     </section>
+
     <section class="home-control">
-      <div>
-        <a href="/"
-          ><button>
-            <i class="fas fa-house-user" style="font-size: 18px;"></i></button
-        ></a>
-      </div>
-      <div>
-        <button class="submit-report" type="submit">
-          <a href="message">Submit report</a>
-        </button>
-      </div>
+      <div><p>All right reserved @ Eco Monitor 2021</p></div>
     </section>
   </body>
 </template>
@@ -90,21 +81,21 @@ export default {
     }
 
     .home-control {
-      background: #649c0f;
-      bottom: 0;
+      position: sticky;
+      bottom: 0px;
+      background-color: #fff;
+      box-shadow: 0px 0px 12px rgba(100, 100, 100, 0.2);
       left: 0;
       position: absolute;
       outline: none;
-      padding: 0.5rem 0;
+      padding: 1.5rem 0;
       font-size: 12px;
-      color: #fff;
+      color: #303030;
       width: 100%;
-      margin-top: 2.5rem;
-      display: flex;
-      justify-content: space-between;
+      text-align: center;
 
       button:hover {
-        background: green;
+        background-color: green;
       }
 
       p {
@@ -201,6 +192,7 @@ export default {
         label {
           color: #ea526f;
         }
+
         input[type="text"] {
           background-color: #fff;
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
