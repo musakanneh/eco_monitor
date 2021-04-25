@@ -117,7 +117,7 @@ export default {
     justify-content: space-between;
 
     .submit-report {
-      width: 47% !important;
+      width: 48% !important;
     }
   }
 
@@ -213,13 +213,13 @@ export default {
 
         p {
           font-size: 13px;
-          text-align: left;
+          text-align: center;
           padding: 0 10px;
         }
 
         i {
-          font-size: 2.4rem;
-          padding: 0.5rem 1.5rem;
+          font-size: 2rem;
+          padding: 0.5rem 3.5rem;
           color: #649c0f;
         }
       }

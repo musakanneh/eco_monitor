@@ -4,8 +4,8 @@
       <div><p>FAQs</p></div>
       <div>
         <a href="/">
-          <i class="fas fa-house-user" style="font-size: 20px;"></i
-        ></a>
+          <img src="../assets/logo1.png" alt="" />
+        </a>
       </div>
 
       <div>
@@ -39,10 +39,7 @@ footer {
     color: #fff;
   }
 
-  i {
-    margin: 0.5rem 0;
-    font-size: 2.4rem;
-    text-align: center;
+  img {
     color: #649c0f;
   }
 }
