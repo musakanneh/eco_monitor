@@ -12,10 +12,10 @@
     <section class="access-account">
       <form>
         <strong>User registration</strong>
-        <div class="email">
+        <div class="f-name">
           <input type="First name" placeholder="First name" />
         </div>
-        <div class="email">
+        <div class="l-name">
           <input type="Last name" placeholder="Last name" />
         </div>
         <div class="password">
@@ -27,10 +27,10 @@
         <div class="password">
           <input type="Phone number" placeholder="Phone number" />
         </div>
-        <div>
-          <button type="submit">Register</button>
-        </div>
       </form>
+      <div>
+        <a href="shareData"> <button>Register</button></a>
+      </div>
 
       <section class="sign-up-sec">
         <div><p>Already have an account?</p></div>

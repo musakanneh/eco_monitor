@@ -14,10 +14,10 @@
         <br />
         <strong>User login</strong>
         <div class="phone-number">
-          <input type="text" placeholder="Phone number" />
+          <input type="number" placeholder="Phone number" />
         </div>
         <div class="password">
-          <input type="text" placeholder="password" />
+          <input type="password" placeholder="password" />
         </div>
         <div>
           <button type="submit">Login</button>
