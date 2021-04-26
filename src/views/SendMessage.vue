@@ -4,7 +4,7 @@
       <aside>
         <h1>{{ Intro }}</h1>
         <p>
-          Access your account to share your location data
+          Share your data, for other to use
         </p>
       </aside>
     </main>
@@ -14,8 +14,8 @@
         <br />
 
         <div>
-          <div class="email">
-            <textarea v-model="text.text" placeholder="Enter report" />
+          <div class="message">
+            <textarea v-model="text.text" placeholder="Write your message here" />
           </div>
 
           <article>
@@ -71,7 +71,7 @@ export default {
       text: {
         text: "",
       },
-      Intro: "The Ecological Monitoring Application",
+      Intro: "The Eco Monitor",
     };
   },
 
@@ -208,7 +208,7 @@ export default {
         background: none;
         display: block;
         width: 90%;
-        padding: 50px 15px;
+        padding: 20px 15px 10rem 15px;
         border-radius: 5px;
         margin-bottom: 20px;
         color: #333;
