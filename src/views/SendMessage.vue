@@ -10,12 +10,12 @@
     </main>
 
     <section class="access-account">
-      <form v.on:submit.prevent="add">
+      <form @submit.prevent="sendMessage">
         <br />
 
         <div>
-          <div class="message">
-            <textarea v-model="text.text" placeholder="Write your message here" />
+          <div class="msg">
+            <textarea v-model="message" placeholder="Write your message here" />
           </div>
 
           <article>
@@ -42,20 +42,21 @@
 
 <script>
 import Footer from "@/components/Footer.vue";
-// import firebase from "firebase";
+import firebase from "firebase/app";
+import "firebase/firestore";
 // import toastr from "toastr";
 
-// let config = {
-//   apiKey: "AIzaSyBs2nmguHUoj63mLmPgYMo9kJgGOlwVrUc",
-//   authDomain: "eco-monitor-90a2f.firebaseapp.com",
-//   projectId: "eco-monitor-90a2f",
-//   storageBucket: "eco-monitor-90a2f.appspot.com",
-//   messagingSenderId: "117749325643",
-//   appId: "1:117749325643:web:6a57bdbd73cba004fc92ce",
-// };
+let config = {
+  apiKey: "AIzaSyBs2nmguHUoj63mLmPgYMo9kJgGOlwVrUc",
+  authDomain: "eco-monitor-90a2f.firebaseapp.com",
+  projectId: "eco-monitor-90a2f",
+  storageBucket: "eco-monitor-90a2f.appspot.com",
+  messagingSenderId: "117749325643",
+  appId: "1:117749325643:web:6a57bdbd73cba004fc92ce",
+};
 
-// let app = firebase.initializeApp(config);
-// let db = app.database();
+firebase.initializeApp(config);
+let db = firebase.firestore();
 // let textRef = db.ref("text");
 
 export default {
@@ -76,15 +77,23 @@ export default {
   },
 
   methods: {
-    add() {
-      textRef.push(this.text);
-      this.text.text = "";
-      this.submitMessage();
+    sendMessage() {
+      // textRef.push(this.text);
+      // this.text.text = "";
+      this.submitMessage(this.message);
+      console.log(this.message);
       //   toastr.success("Submitted successfully!");
     },
 
-    submitMessage() {
-      alert("Message added!");
+    submitMessage(message) {
+      db.collection("message")
+        .add({
+          createdOn: new Date(),
+          Message: message,
+        })
+        .then((res) => {
+          alert("Submitted successfully.");
+        });
     },
   },
 };
