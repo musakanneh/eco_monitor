@@ -12,7 +12,7 @@
 
     <section class="section-cover-1">
       <div class="sign-up-sec">
-        <div><p>Select your location:</p></div>
+        <p>Select your location in the dropdown:</p></div>
         <select name="cars" class="docs">
           <option value="volvo">Ololosokwan</option>
           <option value="saab">Kirtalo</option>
@@ -25,7 +25,7 @@
     <form v.on:submit.prevent="add" class="section-cover">
       <div class="data-categories">
         <div @click="buttonisPressed(0)" :style="getStyle(0)" class="sec-one">
-          <i class="fas fa-cloud"></i>
+          <i class="fas fa-hippo"></i>
           <p>Species sighting</p>
         </div>
         <div @click="buttonisPressed(1)" class="sec-one" :style="getStyle(1)">
@@ -36,7 +36,7 @@
 
       <div class="data-categories">
         <div @click="buttonisPressed(2)" class="sec-one" :style="getStyle(2)">
-          <i class="fas fa-cloud"></i>
+          <i class="fas fa-horse"></i>
           <p>Livestock grazing</p>
         </div>
 
@@ -165,12 +165,12 @@ export default {
     }
 
     select {
-      width: 35%;
+      width: 100%;
       height: 35px;
       border-radius: 3px;
       padding: 0.5rem 0;
-      background: #ffffff;
-      border: 1px solid #649c0f;
+      background: #ddd;
+      border: none;
     }
 
     select:hover {

@@ -61,6 +61,7 @@ import Footer from "@/components/Footer.vue";
 export default {
   name: "message",
   components: { Footer },
+
   firebase: {
     // texts: textRef,
   },

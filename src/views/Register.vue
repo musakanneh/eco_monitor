@@ -80,7 +80,7 @@ export default {
       lastName: "",
       phoneNumber: "",
       error: "",
-      Intro: "Register to acecss your account",
+      Intro: "User registration",
     };
   },
 };
@@ -103,11 +103,20 @@ export default {
           color: #fbfbfb;
         }
 
+        p {
+          font-weight: 300 !important;
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: 0.2px;
+          text-align: justify;
+        }
+
         h1 {
           margin-top: 0;
           line-height: 1.5rem;
           color: #fbfbfb;
           font-size: 20px;
+          letter-spacing: 0.2px;
           font-weight: 400;
         }
       }

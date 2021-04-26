@@ -3,8 +3,7 @@
     <article>
       <h1>{{ Intro }}</h1>
       <p>
-        Choose your location to report an issue (s). <br />
-        Share an update or report a crime
+        How we use your data for for the benefit of all
       </p>
     </article>
 
@@ -21,12 +20,20 @@
       </div>
       <div>
         <strong>Government regulations</strong>
-        <p>Use</p>
+        <p>
+          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+          laying out print, graphic or web designs. The passage is attributed to
+          an unknown types
+        </p>
       </div>
 
       <div>
-        <strong>Government regulations</strong>
-        <p>Use</p>
+        <strong>Declarations</strong>
+        <p>
+          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+          laying out print, graphic or web designs. The passage is attributed to
+          an unknown types
+        </p>
       </div>
     </main>
 
@@ -40,9 +47,14 @@ import Footer from "@/components/Footer.vue";
 export default {
   components: { Footer },
   data() {
+    <p>
+      Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+      laying out print, graphic or web designs. The passage is attributed to an
+      unknown types
+    </p>;
     return {
       isRedColor: "red",
-      Intro: "Ecological Monitoring App",
+      Intro: "Terms of data usage",
       selectedIndex: 0,
     };
   },
@@ -54,6 +66,18 @@ body {
   main {
     width: 90%;
     margin: auto;
+  }
+  p {
+    font-weight: 300 !important;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    text-align: justify;
+  }
+  strong {
+    color: #505050;
+    font-weight: 500;
+    font-size: 12px;
   }
   article {
     background-image: linear-gradient(

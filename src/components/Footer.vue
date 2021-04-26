@@ -1,7 +1,7 @@
 <template>
   <div>
     <footer>
-       <a href="/"> <p>Logout</p></a>
+      <a href="/"> <p>Logout</p></a>
       <div>
         <a href="/shareData">
           <img src="../assets/logo1.png" alt="" />
