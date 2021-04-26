@@ -13,11 +13,11 @@
       <form @submit.prevent="authenticateUserLogin">
         <br />
         <strong>User login</strong>
-        <div class="email">
-          <input type="Phone number" placeholder="Phone number" />
+        <div class="phone-number">
+          <input type="text" placeholder="Phone number" />
         </div>
         <div class="password">
-          <input type="password" placeholder="password" />
+          <input type="text" placeholder="password" />
         </div>
         <div>
           <button type="submit">Login</button>

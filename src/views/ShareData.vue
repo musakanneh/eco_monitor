@@ -14,10 +14,10 @@
       <div class="sign-up-sec">
         <div><p>Select your location:</p></div>
         <select name="cars" class="docs">
-          <option value="volvo">Ololosoloko</option>
-          <option value="saab">Documents</option>
-          <option value="opel">Monograph</option>
-          <option value="audi">Periodical</option>
+          <option value="volvo">Ololosokwan</option>
+          <option value="saab">Kirtalo</option>
+          <option value="opel">Losoito</option>
+          <option value="audi">Ormanie</option>
         </select>
       </div>
     </section>

@@ -12,7 +12,12 @@
       <h2>FAQs</h2>
       <div>
         <strong>How we use your data</strong>
-        <p>Use</p>
+        <p>
+          We decided to use this independent and generalized approach to
+          coordinate-based data collection rather than utilize a tracker-based
+          technology. It avoids the need to attach GPS trackers to individual
+          cattle to enable effective monitoring.
+        </p>
       </div>
       <div>
         <strong>Government regulations</strong>

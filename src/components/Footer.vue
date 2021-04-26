@@ -1,9 +1,9 @@
 <template>
   <div>
     <footer>
-      <div><p>FAQs</p></div>
+       <a href="/"> <p>Logout</p></a>
       <div>
-        <a href="/">
+        <a href="/shareData">
           <img src="../assets/logo1.png" alt="" />
         </a>
       </div>
