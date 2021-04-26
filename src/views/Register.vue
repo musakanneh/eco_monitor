@@ -10,7 +10,7 @@
     </main>
 
     <section class="access-account">
-      <form @submit.prevent="authenticateUserLogin">
+      <form>
         <strong>User registration</strong>
         <div class="email">
           <input type="First name" placeholder="First name" />
@@ -56,23 +56,23 @@ export default {
 
   computed: {},
 
-  methods: {
-    async authenticateUserLogin() {
-      try {
-        const user = firebase
-          .auth()
-          .createUserWithEmailAndPassword(
-            this.firstName,
-            this.lastName,
-            this.phoneNumber
-          );
-        this.$router.replace({ name: "send-message" });
-        console.log(user);
-      } catch (err) {
-        alert("Invalid username or password");
-      }
-    },
-  },
+  // methods: {
+  //   async authenticateUserLogin() {
+  //     try {
+  //       const user = firebase
+  //         .auth()
+  //         .createUserWithEmailAndPassword(
+  //           this.firstName,
+  //           this.lastName,
+  //           this.phoneNumber
+  //         );
+  //       this.$router.replace({ name: "send-message" });
+  //       console.log(user);
+  //     } catch (err) {
+  //       alert("Invalid username or password");
+  //     }
+  //   },
+  // },
 
   data() {
     return {

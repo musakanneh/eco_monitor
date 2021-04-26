@@ -44,7 +44,6 @@
 import Footer from "@/components/Footer.vue";
 import firebase from "firebase/app";
 import "firebase/firestore";
-// import toastr from "toastr";
 
 let config = {
   apiKey: "AIzaSyBs2nmguHUoj63mLmPgYMo9kJgGOlwVrUc",
@@ -57,15 +56,10 @@ let config = {
 
 firebase.initializeApp(config);
 let db = firebase.firestore();
-// let textRef = db.ref("text");
 
 export default {
   name: "message",
   components: { Footer },
-
-  firebase: {
-    // texts: textRef,
-  },
 
   data() {
     return {
@@ -78,11 +72,8 @@ export default {
 
   methods: {
     sendMessage() {
-      // textRef.push(this.text);
-      // this.text.text = "";
       this.submitMessage(this.message);
       console.log(this.message);
-      //   toastr.success("Submitted successfully!");
     },
 
     submitMessage(message) {
